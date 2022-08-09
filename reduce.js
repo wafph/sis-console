@@ -25,6 +25,17 @@
         进入下一次循环，重复上述操作，直至数组最后一个元素
         结束遍历，返回最终的 t
 */
+const arr = ['hello', 'world', 'tuo', 'hello', 'tuo']
+ 
+const obj = arr.reduce((acc, cur) => {
+  if (cur in acc) {
+    acc[cur]++
+  } else {
+    acc[cur] = 1
+  }
+  return acc
+}, {})
+console.log(obj) // { hello: 2, world: 1, tuo: 2 }
 
 let str = "asdzxcjiasjdvnjsnoiawjirnaklsjfnzxlknvlkz";
 // var p = str.split('');
